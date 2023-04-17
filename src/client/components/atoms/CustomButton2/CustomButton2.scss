@@ -1,0 +1,25 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.custom-button2 {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: poppins_regular, sans-serif !important;
+  font-size: 1em;
+  color: $secondary;
+  border: 1px solid $secondary;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 40px;
+  height: 36px;
+  width: 250px;
+  &:hover {
+    background: transparent;
+    box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+  }
+
+  &:focus {
+    background: transparent;
+    box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+  }
+}

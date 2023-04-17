@@ -1,0 +1,13 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.custom-hr {
+  border: 30px solid $third_color;
+  margin: 0;
+  background-color: $third_color;
+
+  @include from($s-medium) {
+    border: 20px solid $third_color;
+    background-color: $third_color;
+  }
+}

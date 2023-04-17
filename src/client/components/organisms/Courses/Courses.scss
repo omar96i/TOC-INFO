@@ -1,0 +1,386 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.courses {
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 80px;
+  &-feature {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    padding-bottom: 70px;
+
+    &__cont {
+      max-width: 1080px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .custom-button {
+        width: 400px;
+        height: 50px;
+        font-family: poppins_semi_bold, sans-serif !important;
+      }
+      & > h4 {
+        font-family: roboto, sans-serif !important;
+        color: $dark;
+        font-size: 2rem;
+        margin-bottom: 50px;
+      }
+      & > p {
+        font-family: poppins_regular, sans-serif !important;
+        font-size: 1.1rem;
+        color: $dark-gray;
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      &--features {
+        display: flex;
+        & > span {
+          display: flex;
+          margin-right: 30px;
+
+          border-right: 2px solid #e5e8ed;
+          & > img {
+            width: 60px;
+            height: 60px;
+          }
+          & > p {
+            font-family: poppins_regular, sans-serif !important;
+            font-size: 1.1rem;
+            color: $dark-gray;
+            margin: 0;
+            margin-left: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  &-prepare {
+    height: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & > h4 {
+      font-family: roboto, sans-serif !important;
+      color: $dark;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      text-align: start;
+      max-width: 1080px;
+      width: 90%;
+    }
+    &__cont {
+      max-width: 1080px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &--txt {
+        max-width: 500px;
+        line-height: 1.5;
+        & > h4 {
+          font-family: roboto, sans-serif !important;
+          color: $dark;
+          font-size: 2rem;
+          margin-bottom: 30px;
+        }
+        & > p {
+          font-family: poppins_regular, sans-serif !important;
+          font-size: 1.2rem;
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+  &-banner {
+    background-image: url("../../../assets/images/fondo-cursos.png");
+    background-size: cover;
+    height: 100%;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__cont {
+      max-width: 1080px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > img {
+        max-width: 500px;
+      }
+      &--txt {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        &-btns {
+          display: flex;
+          .normal {
+            cursor: pointer;
+            width: 220px;
+            height: 42px;
+            margin-right: 20px;
+            background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+            border-radius: 40px;
+            color: white;
+            border: none;
+            &:hover {
+              background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+              box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+            }
+
+            &:focus {
+              background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+              box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+            }
+          }
+          .base {
+            cursor: pointer;
+            width: 220px;
+            height: 42px;
+            margin-right: 20px;
+            background: white;
+            border-radius: 40px;
+            color: $primary;
+            border: 1px solid $primary;
+            &:hover {
+              background: white;
+              box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+            }
+
+            &:focus {
+              background: white;
+              box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+            }
+          }
+        }
+        & > h3 {
+          font-family: roboto, sans-serif !important;
+          font-weight: 600;
+          color: $primary;
+          font-size: 2.2rem;
+        }
+        & > p {
+          font-family: poppins_regular, sans-serif !important;
+          font-size: 1.4rem;
+          color: $dark-gray;
+        }
+        & > span {
+          font-family: poppins_regular, sans-serif !important;
+          font-size: 1.4rem;
+          margin-bottom: 20px;
+          color: $dark;
+        }
+      }
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    font-family: poppins_regular, sans-serif !important;
+    font-size: 1.2rem;
+    color: $dark-gray;
+    &>p{
+      margin-top: 50px;
+      max-width: 1080px;
+      width: 95%;
+      text-align: center;
+    }
+    & > h4 {
+      font-family: roboto, sans-serif !important;
+      color: $dark;
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    &-card {
+      padding: 20px;
+      margin-top: 30px;
+      width: 90%;
+      height: 290px;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0px 4px 20px rgba(21, 93, 151, 0.2);
+      display: flex;
+      position: relative;
+      & > img {
+        margin-right: 0px;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+      }
+      .closed{
+        background: $dark-gray !important;
+      }
+      & > a {
+        cursor:pointer;
+        & > button {
+          cursor: pointer;
+          position: absolute;
+          width: 220px;
+          height: 42px;
+          background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+          border-radius: 40px;
+          color: white;
+          bottom: -20px;
+          right: 20px;
+          border: none;
+          &:hover {
+            background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+            box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+          }
+
+          &:focus {
+            background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+            box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+          }
+        }
+        & > img {
+          margin-right: 0px;
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+        }
+      }
+
+      
+      &--content {
+        margin-left: 20px;
+        & > span {
+          font-family: poppins_semi_bold, sans-serif !important;
+          font-size: 1.1rem;
+          color: $primary;
+        }
+        & > p {
+          font-family: poppins_regular, sans-serif !important;
+          font-size: 1.1rem;
+          color: $dark-gray;
+        }
+        .details {
+          display: flex;
+          align-items: center;
+          margin: 10px 0;
+          & > span {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            color: $dark-gray;
+            font-size: 1.2rem;
+            & > i {
+              font-size: 1.2rem;
+              color: $primary;
+              margin-right: 5px;
+            }
+          }
+        }
+        & .title {
+          display: flex;
+          align-items: center;
+          margin: 0 10px;
+          width: 95%;
+
+          & > h4 {
+            margin: 0;
+            color: $primary;
+          }
+          & > span {
+            background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+            border-radius: 4px;
+            color: white;
+            height: 25px;
+            padding: 0 15px;
+            font-size: 1.1rem;
+            margin: 0 10px;
+          }
+          .disabled{
+            background: gray !important;
+          }
+          & > div {
+            background: $error;
+            border-radius: 4px;
+            color: white;
+            height: 25px;
+            padding: 0 15px;
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include from($large) {
+  .courses-banner {
+    min-height: 70vh;
+  }
+  .courses-banner__cont {
+    flex-direction: column;
+    & > img {
+      display: none;
+    }
+    &--txt {
+      max-width: 300px;
+    }
+  }
+  .courses-prepare__cont {
+    flex-direction: column;
+    & > img {
+      max-width: 300px;
+    }
+    .custom-button {
+      margin-top: 0 !important;
+    }
+  }
+  .courses__cards {
+    h4 {
+      // padding: 0 20px;
+      font-size: 2rem;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+  }
+  .courses-feature__cont--features {
+    flex-direction: column;
+    & > span {
+      margin-top: 20px;
+    }
+  }
+  .courses__cards-card {
+    width: 90%;
+    flex-direction: column;
+    height: 100%;
+    cursor:default;
+    & > a {
+      width: 100%;
+      cursor:default;
+      & > img {
+        margin-right: 0px;
+        width: 300px;
+        height: 250px;
+        object-fit: cover;
+      }
+      & > button {
+        right: 15%;
+        bottom: -30px;
+      }
+    }
+
+    .title {
+      flex-direction: column;
+    }
+    .details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

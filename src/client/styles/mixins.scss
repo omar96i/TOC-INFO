@@ -1,0 +1,22 @@
+$base-size: 16;
+@function size($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+/* Mediaqueries */
+@mixin from($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+/* Mediaqueries */
+@mixin to($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+/* Mediaqueries */
+@mixin from_height($size) {
+  @media (max-height: $size) {
+    @content;
+  }
+}

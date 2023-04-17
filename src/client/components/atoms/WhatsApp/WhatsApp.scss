@@ -1,0 +1,30 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+.whatsApp {
+  position: fixed;
+  bottom: 20px;
+  background-color: #25d366;
+  // background-color: white;
+  display: flex;
+  height: 70px;
+  width: 70px;
+  right: 20px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 15px 10px 15px;
+  border-radius: 50%;
+  z-index: 1000;
+  & > img {
+    height: 45px;
+    width: 45px;
+  }
+  & > a {
+    height: 45px;
+    width: 45px;
+    & > img {
+        height: 45px;
+        width: 45px;
+    }
+  }
+}

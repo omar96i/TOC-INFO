@@ -1,0 +1,199 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.payments {
+  position: relative;
+  padding: 0 30px;
+  display: flex;
+
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.1rem;
+  & > h4 {
+    font-family: roboto, sans-serif !important;
+    color: $dark;
+    font-size: 2.5rem;
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  &__title {
+    font-family: roboto, sans-serif !important;
+  color: $dark;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  }
+
+  &__content {
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 100px;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__base{
+      width: 100%;
+      max-width: 1080px;
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      &>h4{
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      &-plans{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      
+    }
+    &__txt{
+      display: flex;
+      width: 100%;
+      max-width: 1080px;
+    }
+    &__banks{
+      align-self: flex-start;
+      width: 40%;
+    }
+    &__data {
+      width: 50%;
+      height: 400px;
+      margin-bottom: 20px;
+      padding-right: 10%;
+      border-right: 1px solid gray;
+      &__title {
+        font-family: roboto, sans-serif !important;
+      color: $dark;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      margin-top: 0;
+      }
+
+      &__description {
+        font-family: poppins_regular, sans-serif !important;
+        font-size: 1.2em;
+        color: $dark-gray;
+        margin: 5px;
+
+        & > i {
+          margin-right: 10px;
+        }
+
+        &-small {
+          font-size: 1.2em;
+          color: $dark-gray;
+          margin-top: -65px;
+          margin-bottom: 65px;
+        }
+        &-med {
+          font-size: 1.2em;
+          color: $dark-gray;
+          margin-top: 40px;
+          margin-bottom: 60px;
+        }
+      }
+
+      & > hr {
+        margin: 0px 0 20px 0;
+      }
+
+      &__banks {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        & > img {
+          width: 35px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  @include from($x-large) {
+    &__content {
+      flex-wrap: wrap;
+
+      &__data {
+        width: 90%;
+        margin-bottom: 60px;
+      }
+    }
+  }
+
+  @include from($medium) {
+    overflow-x:hidden;
+    
+    & > h4 {
+      font-size: 2.5em;
+      width: 100%;
+    }
+
+    &__content {
+      margin-bottom: 20px;
+      height: 100%;
+      min-height: 100vh;
+      &__base{
+        margin-top: 30px;
+        &>h4{
+          margin-bottom: 10px;
+        }
+        &-plans{
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      &__txt{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 90vh;
+        height: 100%;
+      }
+      &__banks{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &>p{
+          margin-top: -30px;
+        }
+      }
+      &__data {
+        padding-right: 0;        
+        width: 90%;
+        border-right: none;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin-bottom: 10px;
+        // &__banks{
+        //   width: 100%;
+        //   display: flex;
+        //   align-items: center;
+          
+        // }
+        &__title {
+          font-size: 1.8em;
+        }
+
+        &__description {
+          font-size: 1.4em;
+          &-med{
+            margin-bottom: 30px;
+          }
+        }
+
+        & > hr {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

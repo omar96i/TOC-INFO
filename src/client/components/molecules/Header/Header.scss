@@ -1,0 +1,217 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.new-nav{
+  position: absolute;
+  right: 0px;
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  top: 5px;
+}
+.navbar-fixed {
+  height: 80px;
+
+  .navbar {
+    background-color: white;
+    color: $primary;
+    height: 80px;
+    font-family: poppins_regular, sans-serif !important;
+    box-shadow: 0px 10px 20px rgba(21, 93, 151, 0.1);
+    // font-style: italic;
+    .custom-button {
+      width: 160px;
+      margin-left: 10px;
+    }
+    .custom-button2 {
+      width: 120px;
+      margin-left: 30px;
+    }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      // padding-right: 160px;
+      padding-right: 0;
+
+      & > .brand-logo {
+        position: relative;
+        display: flex;
+
+        & > .logo {
+          width: 8rem;
+        }
+      }
+
+      &__content {
+        width: 80%;
+        a {
+          color: $primary;
+          font-size: 1.1rem;
+          margin-left: 15px;
+          user-select: none;
+        }
+        a:hover {
+          background-color: transparent;
+          font-family: poppins_bold, sans-serif !important;
+        }
+      }
+
+      .navbar-logout {
+        font-size: 1.1em;
+        right: 40px;
+      }
+
+      & > .sidenav-trigger {
+        background-color: transparent;
+
+        & > i {
+          font-size: 2em;
+          color: $dark-color;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .custom-active {
+    color: $primary !important;
+    font-family: poppins_bold, sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .custom-active::after {
+    content: "•";
+    color: $primary;
+    margin-top: -50px;
+    margin-bottom: -25px;
+  }
+  @include from(992px) {
+    .navbar {
+      .nav-wrapper {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        &__content {
+          width: 0;
+        }
+        & > .brand-logo {
+          margin-left: -50px;
+        }
+      }
+    }
+  }
+
+  @include from($small) {
+    .showOnMed {
+      position: absolute;
+      visibility: unset;
+      right: 20px;
+      display: flex !important;
+      & > img {
+        width: 40px;
+        border-radius: 50%;
+      }
+    }
+    height: 80px;
+
+    .navbar {
+      height: 80px;
+      & > .nav-wrapper {
+        & > .brand-logo {
+          margin-left: -70px;
+          & > .logo {
+            width: 7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidenav {
+  background-color: white;
+  height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  width: 250px;
+  &-btn2 {
+    text-decoration: none;
+    cursor: pointer;
+    font-family: poppins_regular, sans-serif !important;
+    font-size: 1em;
+    color: $secondary;
+    border: 1px solid $secondary;
+    margin: 0 auto;
+    background: transparent;
+    border-radius: 40px;
+    height: 36px;
+    width: 200px;
+
+    &:hover {
+      background: transparent;
+      box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+    }
+
+    &:focus {
+      background: transparent;
+      box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+    }
+  }
+  &-btn1 {
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: poppins_regular, sans-serif !important;
+    font-size: 1em;
+    color: white;
+    margin: 0 auto;
+    background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+    border-radius: 40px;
+    height: 36px;
+    width: 200px;
+    margin-top: 15px;
+    &:hover {
+      background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+      box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+    }
+
+    &:focus {
+      background: linear-gradient(270deg, #135ebb 4.67%, #479ff8 100%);
+      box-shadow: 0px 0px 18px rgba(21, 96, 189, 0.6);
+    }
+  }
+  & > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    & > img {
+      width: 140px;
+      height: 56px;
+    }
+  }
+  & > span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+  }
+  & > .navbar-logout,
+  li > a {
+    color: $primary;
+    font-family: poppins_regular, sans-serif !important;
+    font-size: 1.2em;
+  }
+}
+
+.btn {
+  background-color: #61d4b3;
+}

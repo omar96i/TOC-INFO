@@ -1,0 +1,217 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+.input-file2{
+  content: 'Select some files'  !important;
+  font-family: poppins_regular, sans-serif !important;
+  width: 80%;
+  width: 430px;
+  height: 100px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+  cursor: pointer;
+}
+.join-select{
+  margin:10px 0;
+  height: 50px;
+  width: calc(100% - 10px);
+  color: $dark;
+  border: 1px solid #e5e8ed !important;
+  font-size: 1.3em !important;
+}
+#doc{
+  border: 1px solid $light-gray;
+  padding: 0 !important;
+  box-shadow: none !important;
+  padding-right: 10px !important;
+  &:focus{
+    font-size: 1.3rem;
+  }
+}
+#error_signup{
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-size: .8rem;
+ 
+}
+#error-phone{
+  margin-bottom: 0;
+  height: 1.3rem;
+  margin-top: -10px;
+}
+.signup {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: url("../../../assets/images/loginVectores.png"),
+    url("../../../assets/images/fondo_login.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  font-family: poppins_regular, sans-serif !important;
+  background-position: center, center;
+  // background-repeat: no-repeat, no-repeat;
+  .custom-button{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  &__back{
+    cursor: pointer;
+    text-align: center;
+    color: $primary;
+    text-decoration: underline;
+  }
+  &__pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &>img{
+      width: 66px;
+      height: 66px;
+    }
+    &-txt{
+      margin-left: 10px;
+      
+      &--title{
+        color: $primary;
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        margin-top: 0;
+        width: 360px;
+        font-family: poppins_semi_bold, open-sans !important;
+      }
+      &--body{
+        margin-top: 0;
+        color: $dark_gray;
+      }
+    }
+  }
+  &__doc{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: .5rem !important;
+    &>select{
+      width: 30%;
+      padding: 5px !important;
+      padding-top: 5px;
+      margin: 0 0 8px 0;
+      border-radius: 4px !important;
+      font-family: poppins_regular, sans-serif !important;
+      font-size: 1rem;
+    }
+    &>label{
+      left: 6rem !important;
+      text-align: left;
+    }
+   
+  }
+  &-link {
+    margin-top: 20px;
+    text-align: center;
+    color: $primary;
+  }
+  &-signup {
+    margin-top: 10px;
+    text-align: center;
+  }
+  &__steps {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-full {
+      margin-left: 5px;
+      width: 37px;
+      height: 6px;
+      background-color: $primary;
+      border-radius: 10px;
+    }
+    &-empty {
+      margin-left: 5px;
+      width: 37px;
+      height: 6px;
+      background-color: $light_gray;
+      border-radius: 10px;
+    }
+  }
+  &__content {
+    background-color: white;
+    border-radius: 8px;
+    padding:30px 10px;
+    height: 100%;
+    width: 100%;
+    max-width: 506px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 30px rgba(10, 49, 186, 0.18);
+    &-check {
+      &--error {
+        color: $error;
+        margin-top: 0px;
+        margin-bottom: 25px;
+      }
+    }
+    &-error {
+      color: $error;
+      margin-top: -20px;
+      margin-bottom: 15px;
+    }
+    &-success {
+      color: $success;
+      margin-top: -20px;
+      margin-bottom: 15px;
+    }
+    &-normal {
+      visibility: hidden;
+      margin-top: -20px;
+      margin-bottom: 15px;
+    }
+    &-p {
+      font-size: 1.4rem;
+      font-family: poppins_semi_bold, open-sans !important;
+      text-align: center;
+      width: 65%;
+      margin-top: 20px;
+    }
+
+    &>form {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      min-height: 125vh;
+      height: 100%;
+      & > .custom-input {
+        font-size: 0.8rem;
+        color: $dark;
+        margin-bottom: 0;
+      }
+      
+
+    }
+  }
+}
+@include from ($medium){
+  .signup__content{
+    margin-top: 20px !important;
+    margin-bottom: 50px !important;
+  }
+  form{
+    width: 100% !important;
+    padding: 0 10px;
+  }
+  .custom-button{
+    margin-top: 20px;
+    width: 250px !important;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}

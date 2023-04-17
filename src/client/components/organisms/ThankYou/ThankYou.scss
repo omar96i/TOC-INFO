@@ -1,0 +1,69 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.thank-you {
+  width: 100%;
+  height: 90vh;
+  min-height: 400px;
+  background-color: $background;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > p  {
+    color: $dark-gray;
+    font-size: 2.2em;
+    font-family: poppins_regular, sans-serif !important;
+    max-width: 590px;
+    text-align: center;
+    line-height: 110%;
+
+    & > .message {
+      display: block;
+      color: white;
+      font-family: roboto, sans-serif !important;
+      background: linear-gradient(270deg, #34C38F 0%, #75EEC2 100%);
+      padding: 10px 15px;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      font-size: 1.4em;
+      font-weight: 600;
+      line-height: 55px;
+    }
+
+    &>a{
+      color: $dark-gray;
+        font-size: 1.3em;
+        font-family: poppins_regular, sans-serif !important;
+        max-width: 590px;
+        text-align: center;
+        line-height: 110%;
+        font-weight: 600;
+    }
+
+    & > .emphasis {
+      font-family: poppins_bold, sans-serif !important;
+    }
+  }
+
+  @include from($s-medium) {
+    padding: 0 20px;
+
+    & > p {
+      font-size: 2em;
+    }
+  }
+}
+
+.thank-you-error {
+  background-color: $background;
+
+  & > p {
+    & > .message {
+      background: linear-gradient(268.72deg, #F46A6A 0.88%, #FE9F9F 98.9%);
+    }
+  }
+}

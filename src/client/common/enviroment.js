@@ -1,0 +1,68 @@
+const prod =
+  typeof location !== "undefined" &&
+  location.href.substring(0, 27) == "https://test.cursostoc.com/"
+    ? {
+        API_URL: "https://testback.cursostoc.com/api",
+        API_URL_LARAVEL: "http://127.0.0.1:8000/api",
+        WEB_LAYER_URL: "/services/app",
+        TOKEN_AUTH_URL: "/TokenAuth",
+        CODE_URL: "/Codigo/GetRegistrationCode",
+        INSCRIPTION_URL: "/Inscription",
+        SUBSCRIPTION_URL: "/Suscription",
+        CONTACT_URL:"/Contact",
+        BLOG_URL: "/Blog",
+        COURSE_URL: "/Course",
+        IMAGE_URL: "/Image",
+        GROUP_URL: "/Group",
+        METRIC_URL: "/Metric",
+        FRONT_URL: "https://cursostoc.com",
+        PAYMENT_URL: "/Payment",
+        WOMPI_URL: "https://production.wompi.co/v1",
+        WOMPI_KEY: "pub_test_nfvectwGBWMx0HBeZAfkRvVl1kZXwq3s",
+        RECAPTCHA_PUBLIC_KEY:"6LfE_54aAAAAAFMM-pqTUuiMPMKhU_evbJSyPeSJ",
+        RECAPTCHA_S_KEY:"6LfE_54aAAAAAI8D0v6Rq6ZNQquLO3iVUFAoKovl",
+      }
+    : {
+        API_URL: "https://back.cursostoc.com/api",
+        API_URL_LARAVEL: "http://127.0.0.1:8000/api",
+        WEB_LAYER_URL: "/services/app",
+        TOKEN_AUTH_URL: "/TokenAuth",
+        CODE_URL: "/Codigo/GetRegistrationCode",
+        INSCRIPTION_URL: "/Inscription",
+        SUBSCRIPTION_URL: "/Suscription",
+        CONTACT_URL:"/Contact",
+        BLOG_URL: "/Blog",
+        COURSE_URL: "/Course",
+        IMAGE_URL: "/Image",
+        GROUP_URL: "/Group",
+        METRIC_URL: "/Metric",
+        FRONT_URL: "https://cursostoc.com",
+        PAYMENT_URL: "/Payment",
+        WOMPI_URL: "https://production.wompi.co/v1",
+        WOMPI_KEY: "pub_test_nfvectwGBWMx0HBeZAfkRvVl1kZXwq3s",
+        RECAPTCHA_PUBLIC_KEY:"6LfE_54aAAAAAFMM-pqTUuiMPMKhU_evbJSyPeSJ",
+        RECAPTCHA_S_KEY:"6LfE_54aAAAAAI8D0v6Rq6ZNQquLO3iVUFAoKovl",
+      };
+
+const dev = {
+  API_URL: "http://localhost:5000/api/",
+  WEB_LAYER_URL: "/services/app",
+  TOKEN_AUTH_URL: "/TokenAuth",
+  CODE_URL: "/Codigo/GetRegistrationCode",
+  INSCRIPTION_URL: "/Inscription",
+  SUBSCRIPTION_URL: "/Suscription",
+  CONTACT_URL:"/Contact",
+  BLOG_URL: "/Blog",
+  COURSE_URL: "/Course",
+  IMAGE_URL: "/Image",
+  GROUP_URL: "/Group",
+  METRIC_URL: "/Metric",
+  FRONT_URL: "http://localhost:3000",
+  PAYMENT_URL: "/Payment",
+  WOMPI_URL: "https://sandbox.wompi.co/v1",
+  WOMPI_KEY: "pub_test_nfvectwGBWMx0HBeZAfkRvVl1kZXwq3s",
+  RECAPTCHA_PUBLIC_KEY:"6LfE_54aAAAAAFMM-pqTUuiMPMKhU_evbJSyPeSJ",
+  RECAPTCHA_S_KEY:"6LfE_54aAAAAAI8D0v6Rq6ZNQquLO3iVUFAoKovl",
+};
+
+export const api = prod;

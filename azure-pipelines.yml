@@ -1,0 +1,59 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-20.04
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    npm install
+    npm install npx
+  displayName: 'npm install'
+- script: |
+    npm install webpack-cli
+  displayName: 'npm install webpack'
+- task: SonarSource.sonarcloud.14d9cde6-c1da-4d55-aa01-2965cd301255.SonarCloudPrepare@1
+  displayName: 'Prepare analysis on SonarCloud'
+  inputs:
+    SonarCloud: 'Sonar TOC-INFO'
+    organization: toceducation
+    scannerMode: CLI
+    configMode: manual
+    cliProjectKey: 'toceducation_TOC-INFO'
+    cliProjectName: 'TOC-INFO'
+- script: |
+    npm run build
+  displayName: 'npm build'
+- task: Npm@1
+  displayName: 'Hacer test'
+  inputs:
+    command: custom
+    verbose: false
+    customCommand: test
+- task: SonarSource.sonarcloud.ce096e50-6155-4de8-8800-4221aaeed4a1.SonarCloudAnalyze@1
+  displayName: 'Run Code Analysis'
+- task: SonarSource.sonarcloud.38b27399-a642-40af-bb7d-9971f69712e8.SonarCloudPublish@1
+  displayName: 'Publish Quality Gate Result'
+- task: ArchiveFiles@2
+  displayName: 'Comprimir los archivos'
+  inputs:
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/src/server/public'
+    includeRootFolder: false
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publicar el artefacto'
+  inputs:
+    ArtifactName: build.front
+# - script: 
+#     npx browserlist@lastest --update-db
+#   displayName: test

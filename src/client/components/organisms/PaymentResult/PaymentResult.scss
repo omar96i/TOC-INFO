@@ -1,0 +1,112 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.payment-result {
+  & > h4 {
+    color: $primary;
+    text-align: center;
+    font-family: poppins_bold, sans-serif !important;
+    font-size: 4em;
+    margin: 3% 0;
+
+    i {
+      font-size: 2em;
+    }
+  }
+
+  .error-title {
+    color: $error;
+  }
+
+  &__content {
+    width: 90%;
+    max-width: $xx-large;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    &__message {
+      font-family: poppins_regular, sans-serif !important;
+      font-size: 1.7em;
+      text-align: center;
+      max-width: $x-large;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    &__data {
+      background-color: #f3f3f3;
+      max-width: $s-medium;
+      padding: 15px;
+      margin: 0 auto;
+      margin-top: 20px;
+      font-size: 1.7em;
+      color: $primary;
+      text-align: center;
+      word-break: break-all;
+      border-radius: 5px;
+
+      &-jump {
+        display: none;
+      }
+
+      &-value {
+        font-family: poppins_bold, sans-serif !important;
+      }
+
+      .type-icon {
+        vertical-align: middle;
+        display: inline-block;
+        width: 80px;
+        height: fit-content;
+        & > img {
+          width: 40px;
+        }
+
+        &__medium {
+          width: 80px !important;
+          margin-top: 10px;
+          margin-left: 40px;
+        }
+      }
+
+      &-invoice {
+        background-color: transparent;
+        border: 2px solid #ccc;
+      }
+    }
+
+    &__button {
+      display: block;
+      margin: 0 auto;
+      height: fit-content;
+      margin-top: -10px;
+      font-size: 1.4em;
+      //   padding: 5px;
+      background: linear-gradient(270deg, #5B53D5 4.67%, #8F45BB 100%);
+    }
+  }
+
+  @include from($s-medium) {
+    & > h4 {
+      font-size: 3em;
+    }
+
+    &__content {
+      &__message {
+        font-size: 1.5em;
+      }
+
+      &__data {
+        font-size: 1.5em;
+
+        &-jump {
+          display: inline;
+        }
+      }
+
+      &__button {
+        font-size: 1.2em;
+      }
+    }
+  }
+}

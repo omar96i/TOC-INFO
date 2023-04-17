@@ -1,0 +1,43 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.form-modal {
+  position: fixed;
+  background-color: white;
+  border-radius:10px;
+  left: 50%;
+  transform: translateX(-50%) !important;
+  margin-top: 20vh;
+  min-width: 300px;
+  max-width: 500px;
+
+  .modal-content {
+    & > h4 {
+      background: linear-gradient(270deg, #5B53D5 4.67%, #8F45BB 100%);
+      border-radius:10px;
+      color: white;
+      width: 100%;
+      padding: 15px 25px;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    & > p {
+      margin: 0;
+      padding: 5px 45px;
+      font-size: 1.2em;
+    }
+  }
+
+  .modal-footer {
+    text-align: right;
+    margin-top: 10px;
+
+    & > a {
+      color: $primary_color;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.not-found {
+  background-color: $background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  font-family: poppins_regular, sans-serif !important;
+  height: 90vh;
+  & > h6 {
+    font-size: 1.6rem;
+    margin-bottom: 40px;
+  }
+  & > img {
+    width: 30%;
+    margin-bottom: 30px;
+  }
+  @include from($x-large) {
+    & > img {
+      width: 90%;
+    }
+    .custom-button{
+      width: 250px;
+    }
+  }
+}

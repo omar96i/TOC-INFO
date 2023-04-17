@@ -1,0 +1,43 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.search-input {
+  min-width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  border: 1px solid #E5E8ED;
+  & > input {
+    box-sizing: border-box !important;
+    box-shadow: none !important;
+    background-color: white !important;
+    border: none !important;
+    padding: 0 15px !important;
+    margin: 0 !important;
+    height: 100% !important;
+
+    &::placeholder {
+      color: #5a5a5a;
+    }
+  }
+
+  & > button {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0 4px 4px 0 !important;
+    box-shadow: none;
+    background-color:transparent !important;
+
+    &:hover {
+      box-shadow: none !important;
+    }
+
+    & > i {
+      font-size: 2em !important;
+      color: white;
+    }
+  }
+}

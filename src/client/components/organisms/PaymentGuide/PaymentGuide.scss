@@ -1,0 +1,35 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.payment-guide {
+  &__content {
+    padding: 20px 10px;
+    & > img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1280px;
+      box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    & > p {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 15px 5px;
+      text-align: center;
+      font-size: 1.5em;
+      background-color: #e7e8ea;
+      color: $primary_color;
+      border-bottom: 5px solid rgba($color: #feaa00, $alpha: 1);
+    }
+  }
+
+  @include from($small) {
+    &__content {
+      & > p {
+        font-size: 1.1em;
+      }
+    }
+  }
+}

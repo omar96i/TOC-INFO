@@ -1,0 +1,21 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.custom-input {
+  width: 90% !important;
+  background-color: white !important;
+  color: $dark;
+  border-radius: 5px !important;
+  border: 1px solid #e5e8ed !important;
+  padding: 2.5px 15px 5px !important;
+  font-size: 1.3em !important;
+
+  &:focus {
+    border: 1px solid #e5e8ed !important;
+    box-shadow: none !important;
+  }
+  &::placeholder {
+    color: $dark-gray;
+    font-size: 1.1em;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.paymentg-modal {
+  position: fixed;
+  bottom: 150px;
+  right: 0;
+  background-color: $secondary_color;
+  padding: 20px 15px;
+  padding-right: 35px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 100;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 30%;
+    background-image: url("../../../assets/images/paymentGuide.jpg");
+    background-size: contain;
+    box-shadow: 0 3px 6px rgba($color: $primary_color, $alpha: 0.16),
+      0 3px 6px rgba($color: $primary_color, $alpha: 0.23);
+  }
+
+  & > h4 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 1.4em;
+    font-family: poppins_bold, sans-serif !important;
+    color: #ffffff;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  @include from($medium) {
+    padding: 15px 10px;
+    right: 68px;
+    bottom: 30px;
+
+    & > h4 {
+      margin-left: 0;
+      font-size: 1em;
+    }
+
+    &__icon {
+      display: none;
+    }
+  }
+}

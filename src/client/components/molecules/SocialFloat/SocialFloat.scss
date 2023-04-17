@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.social-float {
+  position: fixed;
+  top: 340px;
+  background-color: #ccc;
+  display: flex;
+  height: 220px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px 15px 10px 15px;
+  border-radius: 0 10px 10px 0;
+  z-index: 1000;
+
+  & > a > img {
+    width: 55px;
+  }
+
+  @include from($xxx-large) {
+    display: none;
+  }
+}

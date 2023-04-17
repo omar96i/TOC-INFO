@@ -1,0 +1,24 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.cookies-modal {
+  position: fixed;
+  bottom: 0;
+  background-color: $secondary_color;
+  color: $primary_color;
+  padding: 15px;
+
+  & > p {
+    margin: 0;
+    max-width: 600px;
+    color: white;
+    display: inline-block;
+  }
+
+  & > button {
+    float: right;
+    margin-left: 10px;
+    color: white;
+    display: inline-block;
+  }
+}
